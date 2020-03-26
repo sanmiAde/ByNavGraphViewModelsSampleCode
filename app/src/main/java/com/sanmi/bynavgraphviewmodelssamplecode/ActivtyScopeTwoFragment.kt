@@ -31,7 +31,7 @@ class ActivtyScopeTwoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        txt_shared_data.text = activityScopedViewModel.sharedData.toString()
+        txt_shared_data.text = activityScopedViewModel.sharedData
 
         btn_next.setOnClickListener {
             findNavController().navigate(R.id.action_activtyScopeTwoFragment_to_activityScopeThreeFragment)

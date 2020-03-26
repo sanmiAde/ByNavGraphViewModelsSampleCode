@@ -6,6 +6,6 @@ import kotlin.random.Random
 
 class AcitivtyScopedViewModel() : ViewModel() {
 
-    val sharedData = Random(1).nextInt()
+    val sharedData = Random(1).nextInt().toString()
 
 }

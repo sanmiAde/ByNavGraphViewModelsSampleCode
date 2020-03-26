@@ -31,7 +31,7 @@ class ActivityScopeThreeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        txt_shared_data.text = activityScopedViewModel.sharedData.toString()
+        txt_shared_data.text = activityScopedViewModel.sharedData
 
         btn_to_main_fragment.setOnClickListener {
             findNavController().popBackStack(R.id.mainFragment, false)
