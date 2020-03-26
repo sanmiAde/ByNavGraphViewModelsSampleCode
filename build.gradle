@@ -2,6 +2,10 @@
 
 buildscript {
     ext.kotlin_version = '1.3.50'
+    ext.livedata_version ='2.1.0'
+    ext.navigation_component_version = '2.2.0'
+    ext.fragment_version = '1.2.0-rc02'
+
     repositories {
         google()
         jcenter()
