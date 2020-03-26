@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph.xml"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.sanmi.bynavgraphviewmodelssamplecode.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_navScopedFragment"
+            app:destination="@id/nestes_nav" />
+    </fragment>
+    <navigation
+        android:id="@+id/nestes_nav"
+        app:startDestination="@id/navScopedFragment" >
+        <fragment
+            android:id="@+id/navgraphScopedFragmentTwo"
+            android:name="com.sanmi.bynavgraphviewmodelssamplecode.NavgraphScopedFragmentTwo"
+            android:label="fragment_navgraph_scoped_fragment_two"
+            tools:layout="@layout/fragment_navgraph_scoped_fragment_two">
+            <action
+                android:id="@+id/action_navgraphScopedFragmentTwo_to_navgraphScopedThreeFragment"
+                app:destination="@id/navgraphScopedThreeFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/navgraphScopedThreeFragment"
+            android:name="com.sanmi.bynavgraphviewmodelssamplecode.NavgraphScopedThreeFragment"
+            android:label="fragment_navgraph_scoped_three"
+            tools:layout="@layout/fragment_navgraph_scoped_three" />
+        <fragment
+            android:id="@+id/navScopedFragment"
+            android:name="com.sanmi.bynavgraphviewmodelssamplecode.NavScopedFragment"
+            android:label="fragment_nav_scoped"
+            tools:layout="@layout/fragment_nav_scoped">
+            <action
+                android:id="@+id/action_navScopedFragment_to_navgraphScopedFragmentTwo"
+                app:destination="@id/navgraphScopedFragmentTwo" />
+        </fragment>
+    </navigation>
+</navigation>
